@@ -12,9 +12,13 @@
 		C4CFA54121D1422500652DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CFA53F21D1422500652DD1 /* Main.storyboard */; };
 		C4CFA54321D1422600652DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CFA54221D1422600652DD1 /* Assets.xcassets */; };
 		C4CFA54621D1422600652DD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CFA54421D1422600652DD1 /* LaunchScreen.storyboard */; };
+		CFBF9A2F03A55271CD864734 /* Pods_ConcealAPIKeyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A367B2C8B1D2A64BECCFC7 /* Pods_ConcealAPIKeyTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06C68589AEE3098C1D639F1B /* Pods-ConcealAPIKeyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcealAPIKeyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcealAPIKeyTest/Pods-ConcealAPIKeyTest.release.xcconfig"; sourceTree = "<group>"; };
+		24A367B2C8B1D2A64BECCFC7 /* Pods_ConcealAPIKeyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConcealAPIKeyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48CD35A380CFC5537987F177 /* Pods-ConcealAPIKeyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcealAPIKeyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcealAPIKeyTest/Pods-ConcealAPIKeyTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C4CFA53821D1422500652DD1 /* ConcealAPIKeyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcealAPIKeyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CFA53B21D1422500652DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4CFA53D21D1422500652DD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBF9A2F03A55271CD864734 /* Pods_ConcealAPIKeyTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BB697FF62BD0EEA450FC054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24A367B2C8B1D2A64BECCFC7 /* Pods_ConcealAPIKeyTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8239A3667E7EAF43E6AA8C1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48CD35A380CFC5537987F177 /* Pods-ConcealAPIKeyTest.debug.xcconfig */,
+				06C68589AEE3098C1D639F1B /* Pods-ConcealAPIKeyTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C4CFA52F21D1422500652DD1 = {
 			isa = PBXGroup;
 			children = (
 				C4CFA53A21D1422500652DD1 /* ConcealAPIKeyTest */,
 				C4CFA53921D1422500652DD1 /* Products */,
+				8239A3667E7EAF43E6AA8C1A /* Pods */,
+				7BB697FF62BD0EEA450FC054 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CFA54A21D1422600652DD1 /* Build configuration list for PBXNativeTarget "ConcealAPIKeyTest" */;
 			buildPhases = (
+				C9B35AED4516913D1AC85DDA /* [CP] Check Pods Manifest.lock */,
 				C4CFA53421D1422500652DD1 /* Sources */,
 				C4CFA53521D1422500652DD1 /* Frameworks */,
 				C4CFA53621D1422500652DD1 /* Resources */,
+				81DC86902794A9317E953E21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81DC86902794A9317E953E21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConcealAPIKeyTest/Pods-ConcealAPIKeyTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcealAPIKeyTest/Pods-ConcealAPIKeyTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B35AED4516913D1AC85DDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConcealAPIKeyTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4CFA53421D1422500652DD1 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		C4CFA54B21D1422600652DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48CD35A380CFC5537987F177 /* Pods-ConcealAPIKeyTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		C4CFA54C21D1422600652DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C68589AEE3098C1D639F1B /* Pods-ConcealAPIKeyTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
